@@ -18,7 +18,7 @@ import (
 	"github.com/draganm/go-lean/leancron"
 	"github.com/draganm/go-lean/leanmetrics"
 	"github.com/draganm/go-lean/leanweb"
-	"github.com/draganm/template/state"
+	"github.com/draganm/hook-hub/state"
 	"github.com/go-logr/logr"
 	"github.com/go-logr/zapr"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -100,6 +100,7 @@ func main() {
 					}
 					return string(d), nil
 				},
+				"streamEvents": s.StreamEvents,
 			}, &leanweb.GlobalsProviders{})
 			if err != nil {
 				return fmt.Errorf("could not start lean web: %w", err)

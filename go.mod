@@ -1,18 +1,21 @@
-module github.com/draganm/template
+module github.com/draganm/hook-hub
 
 go 1.20
 
 require (
-	github.com/dop251/goja v0.0.0-20230427124612-428fc442ff5f
 	github.com/draganm/bolted v0.10.2
-	github.com/draganm/go-lean v0.0.4
+	github.com/draganm/go-lean v0.0.5
 	github.com/go-logr/logr v1.2.4
 	github.com/go-logr/zapr v1.2.4
 	github.com/prometheus/client_golang v1.15.1
 	github.com/urfave/cli/v2 v2.25.7
-	go.uber.org/multierr v1.7.0
 	go.uber.org/zap v1.24.0
 	golang.org/x/sync v0.1.0
+)
+
+require (
+	github.com/dop251/goja v0.0.0-20230427124612-428fc442ff5f // indirect
+	go.uber.org/multierr v1.7.0 // indirect
 )
 
 require (
@@ -21,7 +24,6 @@ require (
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/dlclark/regexp2 v1.7.0 // indirect
-	github.com/felixge/httpsnoop v1.0.3 // indirect
 	github.com/go-chi/chi v1.5.4 // indirect
 	github.com/go-co-op/gocron v1.28.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
@@ -37,7 +39,6 @@ require (
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	go.etcd.io/bbolt v1.3.6 // indirect
-	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.42.0 // indirect
 	go.opentelemetry.io/otel v1.16.0 // indirect
 	go.opentelemetry.io/otel/metric v1.16.0 // indirect
 	go.opentelemetry.io/otel/trace v1.16.0 // indirect
