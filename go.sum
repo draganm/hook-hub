@@ -25,8 +25,8 @@ github.com/dop251/goja_nodejs v0.0.0-20210225215109-d91c329300e7/go.mod h1:hn7BA
 github.com/dop251/goja_nodejs v0.0.0-20211022123610-8dd9abb0616d/go.mod h1:DngW8aVqWbuLRMHItjPUyqdj+HWPvnQe8V8y1nDpIbM=
 github.com/draganm/bolted v0.10.2 h1:CPOj915I7lXon9whslZFguOxPtaf7UtqBsNzP0GhI4M=
 github.com/draganm/bolted v0.10.2/go.mod h1:JzpeZ2BmuDuMggRz3gVL+1qX2C6b8+6pTgILbrZPztw=
-github.com/draganm/go-lean v0.0.5 h1:e9gurKl3ZgwSEwZ2ZuIrbG2ilEVAjaW3xlJEx6M9gMw=
-github.com/draganm/go-lean v0.0.5/go.mod h1:dn6QWUZ9/GaQymmStO5NTRNFMsdCcfgO9m5rI1wEM/Y=
+github.com/draganm/go-lean v0.0.6 h1:e+VJj8UjH1Ar/EHgwdiBuTE7JK+m3ApoNjqTf2auB94=
+github.com/draganm/go-lean v0.0.6/go.mod h1:dn6QWUZ9/GaQymmStO5NTRNFMsdCcfgO9m5rI1wEM/Y=
 github.com/go-chi/chi v1.5.4 h1:QHdzF2szwjqVV4wmByUnTcsbIg7UGaQ0tPF2t5GcAIs=
 github.com/go-chi/chi v1.5.4/go.mod h1:uaf8YgoFazUOkPBG7fxPftUylNumIev9awIWOENIuEg=
 github.com/go-co-op/gocron v1.28.3 h1:swTsge6u/1Ei51b9VLMz/YTzEzWpbsk5SiR7m5fklTI=

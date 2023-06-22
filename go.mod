@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/draganm/bolted v0.10.2
-	github.com/draganm/go-lean v0.0.5
+	github.com/draganm/go-lean v0.0.6
 	github.com/go-logr/logr v1.2.4
 	github.com/go-logr/zapr v1.2.4
 	github.com/prometheus/client_golang v1.15.1

@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"strings"
 	"syscall"
 	"time"
 
@@ -68,6 +69,12 @@ func main() {
 				Value:   "db",
 				EnvVars: []string{"STATE_FILE"},
 			},
+
+			&cli.StringFlag{
+				Name:     "access-token",
+				Required: true,
+				EnvVars:  []string{"ACCESS_TOKEN"},
+			},
 		},
 		Action: func(c *cli.Context) (err error) {
 			log := zapr.NewLogger(logger)
@@ -101,6 +108,20 @@ func main() {
 					return string(d), nil
 				},
 				"streamEvents": s.StreamEvents,
+				"isAccessTokenValid": func(r *http.Request) bool {
+					auth := r.Header.Get("authorization")
+					before, after, found := strings.Cut(auth, " ")
+					if !found {
+						return false
+					}
+					if before != "Bearer" {
+						return false
+					}
+					if after != c.String("access-token") {
+						return false
+					}
+					return true
+				},
 			}, &leanweb.GlobalsProviders{})
 			if err != nil {
 				return fmt.Errorf("could not start lean web: %w", err)
