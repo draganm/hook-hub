@@ -1,7 +1,9 @@
 {
   "cSpell.words": [
+    "dbpath",
     "draganm",
     "errgroup",
+    "gofrs",
     "leancron",
     "leanfs",
     "leanhttp",

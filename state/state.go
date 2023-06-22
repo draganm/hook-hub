@@ -2,7 +2,6 @@ package state
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 
 	"github.com/draganm/bolted"
@@ -51,12 +50,8 @@ func (s *State) StoreEvent(data string) (err error) {
 }
 
 type EventEnvelope struct {
-	ID    string          `json:"id"`
-	Event json.RawMessage `json:"event"`
-}
-
-func (e *EventEnvelope) MarshalJSON() ([]byte, error) {
-	return []byte(fmt.Sprintf(`{id: "%s",event: %s}`, e.ID, string(e.Event))), nil
+	ID    string `json:"id"`
+	Event string `json:"event"`
 }
 
 const eventBufferSize = 40
@@ -78,7 +73,7 @@ func (s *State) StreamEvents(ctx context.Context, lastSeen string) func() (*Even
 			for ; !it.IsDone(); it.Next() {
 				envelopes = append(envelopes, &EventEnvelope{
 					ID:    it.GetKey(),
-					Event: it.GetValue(),
+					Event: string(it.GetValue()),
 				})
 			}
 			return nil
